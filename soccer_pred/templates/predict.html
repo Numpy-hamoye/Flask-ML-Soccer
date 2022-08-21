@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/w3.css">
     <title>Prediction by ML Model</title>
 </head>
+
 <body>
-    <h1>Prediction result</h1>
-    <hr>
-    <div class="card text-center">
-        <div class="card-body">
-            <p class="card-text">
-                <h1>{{prediction}}</h1>
+    <nav class="w3-bar w3-green">
+        <div class=" w3-animate-bottom">
+            <p class="w3-xxlarge">Prediction result</p>
+        </div>
+    </nav>
+    <div class="w3-card4 w3-margin w3-padding">
+        <div class="card-body w3-padding">
+            <p class="card-text w3-margin">
+            <h1>{{prediction}}</h1>
             </p>
             <p><strong>{{statement}}</strong></p>
         </div>
     </div>
 </body>
+
 </html>
