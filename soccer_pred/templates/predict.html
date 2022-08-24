@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/w3.css">
     <title>Prediction by ML Model</title>
+    <style>
+        body {
+            background-image: url('../static/images/soccer.jpg'); 
+            background-size: auto;
+            color:rgba(240, 248, 255, 0.788);
+        }
+        .pred {
+            color: rgb(248, 255, 240);
+            font-weight: 600;
+            font-size: 1.5em;
+            margin-top: 3em;
+        }
+        h1 {
+            font-size: 2.5em;
+            font-weight: 800;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Prediction result</h1>
-    <hr>
-    <div class="card text-center">
-        <div class="card-body">
-            <p class="card-text">
-                <h1>{{prediction}}</h1>
-            </p>
-            <p><strong>{{statement}}</strong></p>
+    <nav class="w3-bar w3-green">
+        <div class=" w3-animate-bottom">
+            <p class="w3-xxlarge">Prediction result</p>
         </div>
+    </nav>
+    <div class="w3-container">
+
+    </div>
+    <div class="w3-container pred" >
+            <h1>{{prediction}}</h1>
+            <p>
+                <strong>{{statement}}</strong>
+            </p>
     </div>
 </body>
+
 </html>

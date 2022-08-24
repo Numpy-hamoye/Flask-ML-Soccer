@@ -1,167 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soccer Match Prediction</title>
+    <link rel="stylesheet" href="../static/css/w3.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
+
 <body>
-    <h1>Soccer Prediction</h1>
-    <hr>
-    <br>
-    <h2>Enter the values:</h2>
-    <br>
+    <nav class="w3-bar w3-green  ">
+        <div class="w3-xxxlarge w3-padding  w3-bar-item w3-animate-zoom">
+            <h1>Soccer Prediction</h1>
+        </div>
+    </nav>
+    
 
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <form action="/predict/" method="post">
+    <div class="w3-container">
+        <p class="">
+            <h2>Enter the values:</h2>
+        </p>
+        <div class="">
+            <div class="col-6 ">
+                <form action="/predict/" method="post" class="w3-main">
 
-                    <div class="form-group">
-                        <label for="home team"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home team">
-                    </div>
-                    <div class="form-group">
-                        <label for="away team"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away team">
-                    </div>
-                    <div class="form-group">
-                        <label for="half score"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="half score">
-                    </div>
-                    <div class="form-group">
-                        <label for="home rating"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home rating">
-                    </div>
-                    <div class="form-group">
-                        <label for="home possession %"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home possession %">
-                    </div>
-                    <div class="form-group">
-                        <label for="home off shot"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home off shot">
-                    </div>
-                    <div class="form-group">
-                        <label for="home on shot"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home on shot">
-                    </div>
-                    <div class="form-group">
-                        <label for="home total shot"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home total shot">
-                    </div>
-                    <div class="form-group">
-                        <label for="home block shot"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home block shot">
-                    </div>
-                    <div class="form-group">
-                        <label for="home corners"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home corners">
-                    </div>
-                    <div class="form-group">
-                        <label for="home throws"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home throws">
-                    </div>
-                    <div class="form-group">
-                        <label for="home pass %"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home pass %">
-                    </div>
-                    <div class="form-group">
-                        <label for="home aerial won"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home aerial won">
-                    </div>
-                    <div class="form-group">
-                        <label for="home clearances"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home clearances">
-                    </div>
-                    <div class="form-group">
-                        <label for="home fouls"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home fouls">
-                    </div>
-                    <div class="form-group">
-                        <label for="home yellow"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home yellow">
-                    </div>
-                    <div class="form-group">
-                        <label for="home second yellow"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home second yellow">
-                    </div>
-                    <div class="form-group">
-                        <label for="home red"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="home red">
+                    <div class="w3-row row1 w3-animate-zoom">
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin "
+                            style="height:150px;overflow:hidden">
+                            <label for="home team">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME TEAM</p>
+                            </label>
+                            <input type="text" name="home team" placeholder="HOME TEAM">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card  w3-padding w3-round-large w3-green w3-hover-shadow  w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away team">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">AWAY TEAM</p>
+                            </label>
+                            <input type="text" name="away team" placeholder="AWAY TEAM">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card  w3-padding w3-round-large w3-green w3-hover-shadow  w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="half score">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HALF SCORE</p>
+                            </label>
+                            <input type="text" name='half score' placeholder="half score">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin "
+                            style="height:150px;overflow:hidden">
+                            <label for="home rating">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME RATING</p>
+                            </label>
+                            <input type="text" name="home rating" placeholder="home rating">
+                        </div>
+                        <!-- <div class="form-group w3-col  m3 l2 w3-card  w3-padding w3-round-large w3-green w3-hover-shadow  w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="home possession %">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME POSSESSION</p>
+                            </label>
+                            <input type="text" placeholder="home possession %">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card  w3-padding w3-round-large w3-green w3-hover-shadow  w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="home off shot">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME OFF SHOT</p>
+                            </label>
+                            <input type="text" placeholder="home off shot">
+                        </div> -->
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin "
+                            style="height:150px;overflow:hidden">
+                            <label for="home on shot">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME ON SHOT</p>
+                            </label>
+                            <input type="text"  name="home on shot" placeholder="home on shot">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin "
+                            style="height:150px;overflow:hidden">
+                            <label for="home total shot">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME TOTAL SHOT</p>
+                            </label>
+                            <input type="text" name="home total shot" placeholder="home total shot">
+                        </div>
+                        <!-- <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="home block shot">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME BLOCK SHOT</p>
+                            </label>
+                            <input type="text" placeholder="home block shot">
+                        </div> -->
                     </div>
 
-                    <div class="form-group">
-                        <label for="away rating"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away rating">
-                    </div>
-                    <div class="form-group">
-                        <label for="away possession %"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away possession %">
-                    </div>
-                    <div class="form-group">
-                        <label for="away off shot"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away off shot">
-                    </div>
-                    <div class="form-group">
-                        <label for="away on shot"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away on shot">
-                    </div>
-                    <div class="form-group">
-                        <label for="away total shot"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away total shot">
-                    </div>
-                    <div class="form-group">
-                        <label for="away block shot"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away block shot">
-                    </div>
-                    <div class="form-group">
-                        <label for="away corners"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away corners">
-                    </div>
-                    <div class="form-group">
-                        <label for="away throws"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away throws">
-                    </div>
-                    <div class="form-group">
-                        <label for="away pass %"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away pass %">
-                    </div>
-                    <div class="form-group">
-                        <label for="away aerial won"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away aerial won">
-                    </div>
-                    <div class="form-group">
-                        <label for="away clearances"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away clearances">
-                    </div>
-                    <div class="form-group">
-                        <label for="away fouls"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away fouls">
-                    </div>
-                    <div class="form-group">
-                        <label for="away yellow"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away yellow">
-                    </div>
-                    <div class="form-group">
-                        <label for="away second yellow"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away second yellow">
-                    </div>
-                    <div class="form-group">
-                        <label for="away red"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="away red">
-                    </div>
-                    <div class="form-group">
-                        <label for="Match Excitement"><p class="font-weight-bold"></p></label>
-                        <input type="text", name="Match Excitement">
+                    <div class="w3-row row1 w3-animate-top">
+                        <!-- <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="home corners">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME CORNERS</p>
+                            </label>
+                            <input type="text" placeholder="home corners">
+                        </div> -->
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="home throws">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME THROWS</p>
+                            </label>
+                            <input type="text" name="home throws" placeholder="home throws">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="home pass %">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME PASS %</p>
+                            </label>
+                            <input type="text" name="home pass %" placeholder="home pass %">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="home aerial won">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME AERIAL WON</p>
+                            </label>
+                            <input type="text" name="home aerial won" placeholder="home aerial won">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="home clearances">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME CLEARANCES</p>
+                            </label>
+                            <input type="text" name="home clearances" placeholder="home clearances">
+                        </div>
+                        <!-- <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="home fouls">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME FOULS</p>
+                            </label>
+                            <input type="text" placeholder="home fouls">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="home yellow">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME YELLOW</p>
+                            </label>
+                            <input type="text" placeholder="home yellow">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="home second yellow">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">HOME SECOND YELLOW</p>
+                            </label>
+                            <input type="text" placeholder="home second yellow">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="home red"> -->
+                                <!-- <p class="font-weight-bold w3-text-white w3-center w3-large">HOME RED</p>
+                            </label>
+                            <input type="text" placeholder="home red">
+                        </div> -->
                     </div>
 
-                    <input type="submit" value="Submit", class="btn btn-primary">
+                    <div class="w3-row row1 w3-animate-bottom">
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away rating">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">AWAY RATING</p>
+                            </label>
+                            <input type="text" name="away rating" placeholder="away rating">
+                        </div>
+                        <!-- <div class="form-group w3-col  m3  l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label>
+                                <p class="font-weight-bold w3-text-white w3-center w3-large ">AWAY POSSESSION</p>
+                            </label>
+                            <input type="text" placeholder="away possession %">
+                        </div> -->
+                        <!-- <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away off shot">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large ">AWAY OFF SHOT</p>
+                            </label>
+                            <input type="text" placeholder="away off shot "> -->
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away on shot">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large ">AWAY ON SHOT</p>
+                            </label>
+                            <input type="text" name="away on shot" placeholder="away on shot">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away total shot">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large ">AWAY TOTAL SHOT</p>
+                            </label>
+                            <input type="text" name="away total shot" placeholder="away total shot">
+                        </div>
+                        <!-- <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away block shot">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large ">AWAY BLOCK SHOT</p>
+                            </label>
+                            <input type="text" placeholder="away block shot">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away corners">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large ">AWAY CORNERS</p>
+                            </label>
+                            <input type="text" placeholder="away corners"> -->
+                        <!-- </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away throws">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large ">AWAY THROWS</p>
+                            </label>
+                            <input type="text" placeholder="away throws">
+                        </div> -->
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away pass %">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large ">AWAY PASS %</p>
+                            </label>
+                            <input type="text" name="away pass %" placeholder="away pass %">
+                        </div>
+                    </div>
+
+                    <div class="w3-row row1">
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away aerial won">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">AWAY AERIAL WON</p>
+                            </label>
+                            <input type="text" name="away aerial won" placeholder="away aerial won">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away clearances">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">AWAY CLEARANCES</p>
+                            </label>
+                            <input type="text" name="away clearances" placeholder="away clearances">
+                        </div>
+                        <!-- <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away fouls">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">AWAY FOULS</p>
+                            </label>
+                            <input type="text" placeholder="away fouls">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away yellow">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">AWAY YELLOW</p>
+                            </label>
+                            <input type="text" placeholder="away yellow">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away second yellow">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">AWAY SECOND YELLOW</p>
+                            </label>
+                            <input type="text" placeholder="away second yellow">
+                        </div>
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="away red">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">AWAY RED</p>
+                            </label>
+                            <input type="text" placeholder="away red">
+                        </div> -->
+                        <div class="form-group w3-col  m3 l2 w3-card w3-padding  w3-round-large w3-green w3-hover-shadow w3-margin"
+                            style="height:150px;overflow:hidden">
+                            <label for="Match Excitement">
+                                <p class="font-weight-bold w3-text-white w3-center w3-large">MATCH EXCITEMENT</p>
+                            </label>
+                            <input type="text"  name="Match Excitement" placeholder="Match Excitement">
+                        </div>
+                    </div>
+
+                    <div class="subm ">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <input type="submit" class="subb" value="Submit" class="btn btn-primary">
+                    </div>
+
 
                 </form>
             </div>
         </div>
     </div>
-    
+
 </body>
+
 </html>
