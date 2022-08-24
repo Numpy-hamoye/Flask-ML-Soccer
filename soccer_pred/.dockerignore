@@ -1,2 +1,5 @@
 __pycache__
-soccer_pred/
+soccer_pred/# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.git
+.gitignore
